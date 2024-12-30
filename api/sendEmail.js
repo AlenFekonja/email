@@ -3,7 +3,7 @@ import sgMail from '@sendgrid/mail';
 
 // Set your SendGrid API key (Store it in an environment variable for security)
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
+console.error(process.env.SENDGRID_API_KEY);
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { to, subject, text, html } = req.body;
