@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     // Construct the email object
     const msg = {
       to,  // recipient's email address
-      from: 'your-email@example.com',  // your verified sender email from SendGrid
+      from: 'alen.fek.sola@gmail.com',  // your verified sender email from SendGrid
       subject,
       text,
       html,
