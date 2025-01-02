@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     console.error('SendGrid API key is not set!');
   }
   // Set your SendGrid API key (Store it in an environment variable for security)
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
     
     const { to, subject, text, html } = req.body;
