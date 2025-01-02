@@ -6,9 +6,9 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
 
   if (process.env.SENDGRID_API_KEY) {
-    console.warn('SendGrid API key is being read correctly');
+    console.error('SendGrid API key is being read correctly');
   } else {
-    console.warn('SendGrid API key is not set!');
+    console.error('SendGrid API key is not set!');
   }
   // Set your SendGrid API key (Store it in an environment variable for security)
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
